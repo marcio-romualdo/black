@@ -1,0 +1,168 @@
+@model itens
+<form method="POST">
+<style>
+#span1{
+ 
+color: white;;
+}
+/* Dropdown Button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+</style>
+
+
+
+
+
+<script>
+
+</script>
+  <body>
+<div class="dropdown">
+  <button class="dropbtn">Cervejas</button>
+  <div class="dropdown-content">
+   
+      @Html.ActionLink("Skol","Skol", "Cervejas", null, null)
+      @Html.ActionLink("Brahma","Brahma", "Cervejas", null, null)
+      @Html.ActionLink("Heineken","Heineken", "Cervejas", null, null)
+      @Html.ActionLink("Itaipava","Itaipava", "Cervejas", null, null)
+      @Html.ActionLink("Budweiser","Budweiser", "Cervejas", null, null)
+      @Html.ActionLink("Antarctica","Antarctica", "Cervejas", null, null)
+      @Html.ActionLink("Lokal","Lokal", "Cervejas", null, null)
+      @Html.ActionLink("Amstel","Amstel", "Cervejas", null, null)
+      @Html.ActionLink("Bohemia","Bohemia", "Cervejas", null, null)
+      @Html.ActionLink("Imperio","Imperio", "Cervejas", null, null)
+      @Html.ActionLink("Petra","Petra", "Cervejas", null, null)
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Whisky</button>
+  <div class="dropdown-content">
+   
+      @Html.ActionLink("Red Label ","RedLabel", "Whisky", null, null)
+      @Html.ActionLink("White Horse","WhiteHorse", "Whisky", null, null)
+      @Html.ActionLink("Ballantines","Ballantines", "Whisky", null, null)
+      @Html.ActionLink("Old Parr","OldParr", "Whisky", null, null)
+      @Html.ActionLink("Jack Daniels","JackDaniels", "Whisky", null, null)
+      @Html.ActionLink("Chivas Regal","ChivasRegal", "Whisky", null, null)
+      @Html.ActionLink("Passaport","Passaporte", "Whisky", null, null)
+      @Html.ActionLink("Olden blend","Olden blend", "Whisky", null, null)
+      @Html.ActionLink("Natu Nobilis","Natu Nobilis", "Whisky", null, null)
+      @Html.ActionLink("Olden Wack","Olden Wack", "Whisky", null, null)
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Vodka</button>
+  <div class="dropdown-content">
+   
+      @Html.ActionLink("Kislla ","Kislla", "Vodka", null, null)
+      @Html.ActionLink("Raykoff","Raykoff", "Vodka", null, null)
+      @Html.ActionLink("Smirnoff","Smirnoff", "Vodka", null, null)
+      @Html.ActionLink("Ciroc","Ciroc", "Vodka", null, null)
+      @Html.ActionLink("Greygoose","Greygoose", "Vodka", null, null)
+      @Html.ActionLink("Absolut","Absolut", "Vodka", null, null)
+      @Html.ActionLink("NordKa","Nord Ka", "Vodka", null, null)
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Gim</button>
+  <div class="dropdown-content">
+   
+      @Html.ActionLink("Gordons","Gordons", "Vodka", null, null)
+      @Html.ActionLink("Eternety","Gordons", "Vodka", null, null)
+      @Html.ActionLink("Tanquery","Tanquery", "Vodka", null, null)
+  </div>
+</div>
+
+
+
+<div class="dropdown">
+  <button class="dropbtn">Refrigerantes</button>
+  <div class="dropdown-content">
+   
+      @Html.ActionLink("Coca Cola ","CocaCola", "Refrigerantes", null, null)
+      @Html.ActionLink("Agua","Agua", "Refrigerantes", null, null)
+      @Html.ActionLink("Fanta laranja","Fantalaranja", "Refrigerantes", null, null)
+      @Html.ActionLink("Guarana","Guarana", "Refrigerantes", null, null)
+      @Html.ActionLink("Fanta Uva","FantaUva", "Refrigerantes", null, null)
+      @Html.ActionLink("Sprite","Sprite", "Refrigerantes", null, null)
+      
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Cachaça</button>
+  <div class="dropdown-content">
+   
+      @Html.ActionLink("Cabaré","Cabaré", "Cachaça", null, null)
+      @Html.ActionLink("Velho Barreiro","VelhoBarreiro", "Cachaça", null, null)
+      @Html.ActionLink("Pirassunga 51","Pirassunga51", "Cachaça", null, null)
+      @Html.ActionLink("Pergola Vinho","PergolaVinho", "Cachaça", null, null)
+      @Html.ActionLink("Campo Largo","CampoLargo", "Cachaça", null, null)
+      @Html.ActionLink("Cantinho da Vale","CantinhodaVale", "Cachaça", null, null)
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn">Carvão/Gelo</button>
+  <div class="dropdown-content">
+   
+      @Html.ActionLink("Gelo Cubo","GeloCubo", "Carvaogelo", null, null)
+      @Html.ActionLink("Carvão","Carvao", "Carvaogelo", null, null)
+      @Html.ActionLink("Gelo Barra","GeloBarra", "Carvaogelo", null, null)
+    
+     
+     
+  </div>
+</div>
+    
+
+
+
+
+
+
+			</body>
+</form>
+

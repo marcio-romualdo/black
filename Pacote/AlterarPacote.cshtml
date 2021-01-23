@@ -1,0 +1,32 @@
+@using Microsoft.AspNetCore.Http
+@model Usuario2
+@foreach(Usuario2 u in Repositorio2.QueryPacotes()){
+    if(u.Id == Context.Session.GetInt32("PacoteEdit")){
+        <form id="formcad" method="POST">
+            <h2>Editar pacote:</h2>
+
+            <div class="form-group row">
+            <input  class="col-sm-2 col-form-label" required placeholder="Nome - @u.Nome" asp-for="Nome"/>
+          </div>
+            <div class="form-group row">
+            <textarea class="col-sm-2 col-form-label" required placeholder="Atrativos -  @u.Atrativos" asp-for="Atrativos"></textarea>
+            </div>
+            <div class="form-group row">
+             <textarea class="col-sm-2 col-form-label" required placeholder="Destino -  @u.Atrativos" asp-for="Destino"></textarea>
+                </div>
+            
+            <div class="form-group row">
+                <input  class="col-sm-2 col-form-label" required placeholder="Data de saída - @u.Saida" asp-for="Saida"/>   
+            
+            </div>
+            <div class="form-group row">
+                <input class="col-sm-2 col-form-label" required placeholder="Data de retorno - @u.Retorno" asp-for="Retorno"/> 
+            </div>
+            
+            <input class="botao" value="Alterar" type="submit"/>
+                                        
+
+
+        </form>
+    }  
+}

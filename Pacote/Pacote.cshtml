@@ -1,0 +1,13 @@
+@using Microsoft.AspNetCore.Http
+@model Usuario2
+@foreach(Usuario2 u in Repositorio2.QueryPacotes()){
+    if(u.Id == Context.Session.GetInt32("PacoteEdit")){
+        <form id="formcad" method="POST">
+            <h2>@u.Nome</h2>
+            <textarea id="atrativos" readonly>  @u.Atrativos</textarea>
+            <input readonly value="Destino - @u.Destino"/>
+            <input readonly value="Data de saída - @u.Saida"/>   
+            <input readonly value="Data de retorno - @u.Retorno"/> 
+        </form>
+    }  
+}

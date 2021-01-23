@@ -1,0 +1,91 @@
+﻿@using Microsoft.AspNetCore.Http
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Atv_02</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" type="wwwroot/css" href="site.css" />
+</head>
+
+<style>
+    body{
+     background: url('../img/fundo.png') no-repeat center center fixed; 
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+   }
+   div{
+       color: white;
+   }
+</style>
+ 
+<body  >
+    <header style="color: 	#696969;">
+       
+    
+
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                 
+        
+   
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><span>BLACK </span> <span> & WHITE</span></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                 </div>
+                <div class="container">
+                  <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Bebida_pagina">Bebidas </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                     
+                </button>
+            </div>
+
+         
+            
+            @if(Context.Session.GetInt32("idUsuario") != null)
+                {
+                    <span>Olá @Context.Session.GetString("nomeUsuario")</span>
+                    <a class="nav-link" asp-area="" asp-controller="Logado" asp-action="Logout">SAIR</a>
+                }
+                else{
+                    <a class="nav-link" asp-area="" asp-controller="Logado" asp-action="Login">ENTRAR</a>
+                }
+                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="QuemSomos">Quem somos</a>
+
+                 <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Contato">Contato</a>
+                 
+                 <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Carrinho">Carrinho</a>
+<div>
+             <a href="https://www.facebook.com/Black-White-109172030520062/"> <span class="fa fa-facebook"><i class="sr-only"> Facebook</i> </span> </a> 
+          <a href="https://www.facebook.com/Black-White-109172030520062/" ><span class="fa fa-whatsapp"><i class="sr-only">WhatsApp</i></span></a>
+           <a href="https://www.facebook.com/Black-White-109172030520062/" ><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+</div>
+        </nav>
+        
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - Atv_02 -
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

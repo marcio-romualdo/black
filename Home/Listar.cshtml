@@ -1,0 +1,37 @@
+@{
+    ViewData["Title"] = "Listagem de Pacotes";
+}
+<h2 class="text-center">Lista</h2>
+<table class="table table-bordered table-dark">
+    <thead>
+        <tr>
+        <th scope="col">Nome </th>
+        <th scope="col">Telefone </th>
+        <th scope="col">Cidade</th>
+        <th scope="col">Bairro</th>
+        <th scope="col">Numero</th>
+        <th scope="col">Bebida</th>
+        <th scope="col">Quantidade </th>
+        <th scope="col">Descriçao bebida </th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            UsuarioRepositorio a = new UsuarioRepositorio();
+            foreach (itens u in a.Listar())
+            {
+               <tr>
+            <td>@u.Nome</td>
+          <td>@u.Telefone</td>
+        <td>@u.Cidade</td>
+         <td>@u.Bairro</td>
+          <td>@u.Numero</td>
+         <td>@u.Bebida</td>
+         <td>@u.Quantidade</td>
+         <td>@u.Descricao</td>
+         </tr>
+            } 
+        }  
+    </tbody>
+</table>
+<a class="btn btn-primary" asp-area="" asp-controller="Logado" asp-action="Funcionario">Voltar</a>

@@ -1,0 +1,39 @@
+﻿
+
+<div class="text-center">
+    <h1 class="display-4">Promoções</h1>
+    
+</div>
+
+@{
+    ViewData["Title"] = "Listagem de Pacotes";
+}
+<h2 class="text-center">Lista</h2>
+<table class="table table-bordered table-dark">
+    <thead>
+        <tr>
+           <th scope="col">Bebida</th>
+            <th scope="col">Promoção</th>
+            <th scope="col">Satisfação</th>
+            <th scope="col">Valor</th>
+            <th scope="col">Retornavel</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            Repositorio2 a = new Repositorio2();
+            foreach (Usuario2 u in a.Listar())
+            {
+                <tr>
+                    <td>@u.Nome</td>
+                    <td>@u.Destino</td>
+                    <td>@u.Atrativos</td>
+                    <td>@u.Saida</td>
+                    <td>@u.Retorno</td>
+
+                </tr>
+            } 
+        }  
+    </tbody>
+</table>

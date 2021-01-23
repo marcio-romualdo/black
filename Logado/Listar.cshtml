@@ -1,0 +1,27 @@
+@model IEnumerable<Usuario>
+@{
+    ViewData["Title"] = "Listagem de Usuário";
+}
+<h2 class="text-center">Listagem de usuários pelo funcionário sem as senhas</h2>
+<table class="table table-bordered table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Login</th>
+            <th scope="col">Permissão</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Usuario u in Model)
+        {
+            <tr>
+                <td>@u.Id</td>
+                <td>@u.Nome</td>
+                <td>@u.Login</td>
+                <td>@u.Permissao</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a class="btn btn-primary" asp-area="" asp-controller="Logado" asp-action="Funcionario">Voltar</a>

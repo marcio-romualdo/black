@@ -1,0 +1,38 @@
+@model Usuario
+@{
+    ViewData["Title"] = "Cadastro de Usuário";
+}
+<div class="container">
+    <h2 class="text-center">Cadastro de Usuário</h2>
+    <div class="container">
+        <form asp-action="Inserir" method="POST">
+            <div class="form-group row">
+                <label asp-for="Nome" class="col-sm-2 col-form-label">Nome:</label>
+                <input asp-for="Nome" type="text" placeholder="Ex: Marcio Romualdo" required/>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Login" class="col-sm-2 col-form-label">Login:</label>
+                <input asp-for="Login" type="text" placeholder="Ex: MarcioRomualdo" required/>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Senha" class="col-sm-2 col-form-label">Senha:</label>
+                <input asp-for="Senha" type="password" placeholder="Ex: abcd123" required/>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Permissao" class="col-sm-2 col-form-label">Permissão:</label>
+                <div col-sm-10>
+                <select class="form-control" asp-for="Permissao"> 
+                    <option value="Administrador">Administrador</option>
+                    <option value="Funcionário">Funcionário</option>
+                </select>
+            </div>
+            </div> 
+            <div class="form-group row">
+                <p>
+                    <input type="submit" value="Cadastrar" class="btn btn-primary mb-2"/>
+                </p>
+            </div>   
+        </form>
+        <a class="btn btn-primary" asp-area="" asp-controller="Logado" asp-action="Administrador">Voltar</a>
+    </div>
+</div>   

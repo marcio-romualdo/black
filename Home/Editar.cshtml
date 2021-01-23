@@ -1,0 +1,15 @@
+@model itens
+
+<form id="pacotes" method="POST">
+    <h2>Selecionar seu nome para editar ou excluir:</h2>
+        <select id="pacotesselect" asp-for="Id">
+            @foreach(itens u in UsuarioRepositorio.QueryPacotes()){
+                <option value="@u.Id">@u.Nome</option>   
+            }    
+        </select>                     
+    
+   <input asp-action="ExcluirCompra" class="botao" type="submit" value="Excluir">  
+      <input asp-action="EditarCompra" class="botao" type="submit" value="Editar">  
+
+                         
+</form>

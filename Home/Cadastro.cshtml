@@ -1,0 +1,69 @@
+@model itens
+@{
+    ViewData["Title"] = "Finalizar pedido";
+}
+<style>
+   div{
+      color: white;
+   }
+</style>
+<div class="container">
+<h2  align="center"  >Finalizando seu pedido</h2>
+  <form asp-action="Concluido" method="POST">
+ <div class="container">
+     <label asp-for="Nome" class="col-sm-2 col-form-label">Nome:</label>
+      <input asp-for="Nome" type="text" placeholder="Ex: Marcio Romualdo" required/>
+    </div>
+    <div class="form-group row">
+       <label  class="col-sm-2 col-form-label" asp-for="Telefone" >Telefone</label>
+     <input asp-for="Telefone"  type="text" placeholder="Ex: (00)00012345"/>
+     </div>
+<div class="form-group row">
+     <label asp-for="Bebida" class="col-sm-2 col-form-label"  >Bebida</label>  <br>
+     <select name="Bebida" >
+        <option  asp-for="Bebida">Skol "Caixa"</option>
+        <option asp-for="">Brahma "Caixa"</option>
+        <option asp-for="">Itaipava "Caixa"</option>
+        <option asp-for="">Heineken "Caixa"</option>
+        <option asp-for="">Budweiser "Caixa"</option>
+        <option asp-for="">Antarctica "Caixa"</option>
+    </select>
+   
+     </div>
+     <div class="form-group row">
+     <label asp-for="Quantidade"  class="col-sm-2 col-form-label" >Quantidade</label> 
+     <input asp-for="Quantidade" />
+     </div>
+ <div class="form-group row">
+    <label asp-for="Cidade" class="col-sm-2 col-form-label"  >Cidade</label> 
+  
+     <select name="Cidade" >
+        <option  asp-for="Cidade">Guarantã Do Norte</option>
+        <option asp-for="Cidade">Matupa</option>
+        <option asp-for="Cidade">Peixoto De Azevedo</option>
+        <option asp-for="Cidade">Novo Mundo</option>
+    </select>
+ </div>
+<div class="form-group row">
+    <label  class="col-sm-2 col-form-label"  asp-for="Bairro" >Bairro</label>
+    
+     <input asp-for="Bairro" />
+    </div>
+<div class="form-group row">
+    <label class="col-sm-2 col-form-label"  asp-for="Numero" >Numero</label>
+    
+     <input asp-for="Numero" />
+    </div>
+    <div class="form-group row">
+      <label asp-for="Descricao" class="col-sm-2 col-form-label" >Referencia</label>
+          
+     <textarea asp-for="Descricao" style=" height:80px;" ></textarea>
+    </div>
+    
+    <input type="submit" value="Enviar">
+   <br>
+   <br>
+    
+</p>
+</form>
+ </div>

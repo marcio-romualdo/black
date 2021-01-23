@@ -1,0 +1,19 @@
+@using Microsoft.AspNetCore.Http
+@model itens
+@foreach(itens u in UsuarioRepositorio.QueryPacotes()){
+    if(u.Id == Context.Session.GetInt32("PacoteEdit")){
+        <form id="formcad" method="POST">
+            <h2>Editar pacote:</h2>
+
+            <div class="form-group row">
+            <input  class="col-sm-2 col-form-label" required placeholder="Nome - @u.Nome" asp-for="Nome"/>
+          </div>
+           
+            
+            <input class="botao" value="Alterar" type="submit"/>
+                                        
+
+
+        </form>
+    }  
+}

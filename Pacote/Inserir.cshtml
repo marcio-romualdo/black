@@ -1,0 +1,47 @@
+@model Usuario2
+@{
+    ViewData["Title"] = "Cadastro de Usuário";
+}
+<div class="container">
+    <h2 class="text-center">Inserir pacotes</h2>
+    <div class="container">
+        <form asp-action="Inserir" method="POST">
+            <div class="form-group row">
+                <label asp-for="Nome" class="col-sm-2 col-form-label">Bebida:</label>
+                <input asp-for="Nome" type="text" placeholder="Ex: Skol 300ml" required/>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Destino" class="col-sm-2 col-form-label">Promoção:</label>
+                <input asp-for="Destino" type="text" placeholder="" required/>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Atrativos" class="col-sm-2 col-form-label">Satisfação:</label>
+                 <select name="Atrativos" >
+        <option  asp-for="Atrativos">BOM</option>
+        <option asp-for="">Otimo</option>
+        <option asp-for="">RUIM</option>
+        
+    </select>
+            </div>
+           <div class="form-group row">
+                <label asp-for="Saida" class="col-sm-2 col-form-label">Valor:</label>
+                <input asp-for="Saida" type="text" placeholder="Ex: R$" required/>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Retorno" class="col-sm-2 col-form-label">Retornavel:</label>
+                     <select name="Retorno" >
+        <option  asp-for="Retorno">Não</option>
+        <option asp-for="">Sim</option>
+   
+    </select>
+            </div>
+            
+            <div class="form-group row">
+                <p>
+                    <input type="submit" value="Cadastrar" class="btn btn-primary mb-2"/>
+                </p>
+            </div>   
+        </form>
+        <a class="btn btn-primary" asp-area="" asp-controller="Logado" asp-action="Administrador">Voltar</a>
+    </div>
+</div>   

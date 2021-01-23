@@ -1,0 +1,17 @@
+@model Usuario2
+@if(Repositorio2.QueryPacotes().Count == 0){
+<form id="pacotes" method="POST">
+    <h2>Nenhum pacote registrado!</h2>
+</form>
+}else{
+<form id="pacotes" method="POST">
+    <h2>Selecionar pacote:</h2>
+        <select id="pacotesselect" asp-for="Id">
+            @foreach(Usuario2 u in Repositorio2.QueryPacotes()){
+                <option value="@u.Id">@u.Nome</option>   
+            }    
+        </select>                     
+    <input asp-action="Excluir" class="botao" type="submit" value="Excluir">                          
+                         
+</form>
+}
